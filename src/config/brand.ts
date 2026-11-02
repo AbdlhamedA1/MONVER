@@ -30,7 +30,7 @@ export const BRAND_CONFIG: BrandConfig = {
   subheadline: "Discover everyday essentials designed around quality, comfort, and effortless style.",
   
   // Official MONVER Brand Hero Image provided in images folder
-  heroImage: "/images/hero img.jpeg",
+  heroImage: `${import.meta.env.BASE_URL}images/hero img.jpeg`,
   
   currency: "EGP",
 

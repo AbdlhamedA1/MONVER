@@ -25,7 +25,7 @@ export const CategoryBoxes: React.FC<CategoryBoxesProps> = ({ onSelectCategory }
       id: 'crewnecks' as const,
       title: 'CREWNECKS',
       subtitle: '420 GSM French Terry',
-     
+      sublabel: 'Limited Edition',
       description: 'Precision ribbed collar with effortless drape and shape retention.',
       image: `${base}images/cronic one.jpg`,
       originalPrice: 700,

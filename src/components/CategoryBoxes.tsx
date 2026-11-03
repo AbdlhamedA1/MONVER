@@ -15,7 +15,7 @@ export const CategoryBoxes: React.FC<CategoryBoxesProps> = ({ onSelectCategory }
       title: 'HOODIES',
       subtitle: '480 GSM Heavyweight Fleece',
       description: 'Double-layered seamless hood with relaxed architectural drop shoulders.',
-      image: `${base}images/hude one.jpg`,
+      image: `${base}images/hude one.jpeg`,
       originalPrice: 750,
       price: 599,
       sizes: ['M', 'L', 'XL', 'XXL'],
@@ -25,7 +25,7 @@ export const CategoryBoxes: React.FC<CategoryBoxesProps> = ({ onSelectCategory }
       id: 'crewnecks' as const,
       title: 'CREWNECKS',
       subtitle: '420 GSM French Terry',
-      sublabel: 'Cronic Edition',
+     
       description: 'Precision ribbed collar with effortless drape and shape retention.',
       image: `${base}images/cronic one.jpg`,
       originalPrice: 700,

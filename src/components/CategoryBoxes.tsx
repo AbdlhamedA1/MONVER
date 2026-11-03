@@ -15,7 +15,7 @@ export const CategoryBoxes: React.FC<CategoryBoxesProps> = ({ onSelectCategory }
       title: 'HOODIES',
       subtitle: '480 GSM Heavyweight Fleece',
       description: 'Double-layered seamless hood with relaxed architectural drop shoulders.',
-      image: `${base}images/hude one.jpeg`,
+      image: `${base}images/img1.jpeg`,
       originalPrice: 750,
       price: 599,
       sizes: ['M', 'L', 'XL', 'XXL'],

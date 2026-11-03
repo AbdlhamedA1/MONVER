@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
     availableSizes: ['M', 'L', 'XL', 'XXL'],
     availableColors: [
       { name: 'Pitch Black', hex: '#0A0A0A', image: `${base}images/img4.jpg` },
-      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpg` },
+      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpeg` },
     ],
     description: 'Understated quiet luxury silhouette in custom jet black finish. Tailored with a double-layered structured hood and drop shoulders.',
     fabric: '100% Combed Heavy Cotton (480 GSM)',
@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     availableColors: [
       { name: 'Espresso Brown', hex: '#3B2314', image: `${base}images/img7.jpeg` },
       { name: 'Pitch Black', hex: '#0A0A0A', image: `${base}images/img4.jpg` },
-      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpg` },
+      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpeg` },
     ],
     description: 'Rich espresso brown tone in our signature 480 GSM heavyweight fleece. Tailored with a double-layered structured hood and clean drop shoulders.',
     fabric: '100% Combed Heavy Cotton (480 GSM)',
@@ -170,7 +170,7 @@ export const PRODUCTS: Product[] = [
     availableSizes: ['M', 'L', 'XL', 'XXL'],
     availableColors: [
       { name: 'Baby Blue', hex: '#A4C8E1', image: `${base}images/img8.jpeg` },
-      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpg` },
+      { name: 'Heather Grey', hex: '#A6A6A6', image: `${base}images/hude one.jpeg` },
       { name: 'Pitch Black', hex: '#0A0A0A', image: `${base}images/img4.jpg` },
     ],
     description: 'Soft baby blue hue meets heavyweight construction. A fresh take on the boxy hoodie silhouette with cloud-like comfort.',

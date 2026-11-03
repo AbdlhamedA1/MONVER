@@ -276,7 +276,7 @@ export const PRODUCTS: Product[] = [
     features: [
       "Pre-shrunk 480 GSM combed cotton",
       "Double-layered seamless hood",
-      "Rich jewel tone burgundy dye",
+      "Rich jewel tone burgundy dyae",
       "Reinforced drop shoulder seams",
     ],
     measurements: STANDARD_MEASUREMENTS,

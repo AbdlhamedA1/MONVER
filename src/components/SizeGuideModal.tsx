@@ -12,7 +12,6 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose,
   if (!isOpen) return null;
 
   const measurements = product?.measurements || [
-    { size: 'S', chest: 56, length: 68, shoulder: 52 },
     { size: 'M', chest: 59, length: 71, shoulder: 54 },
     { size: 'L', chest: 62, length: 74, shoulder: 56 },
     { size: 'XL', chest: 65, length: 76, shoulder: 58 },

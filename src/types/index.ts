@@ -1,4 +1,4 @@
-export type ProductSize = 'S' | 'M' | 'L' | 'XL' | 'XXL';
+export type ProductSize = 'M' | 'L' | 'XL' | 'XXL';
 
 export interface ProductColor {
   name: string;

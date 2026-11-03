@@ -4,7 +4,7 @@ import { BRAND_CONFIG } from '../config/brand';
 
 export const Hero: React.FC = () => {
   const handleScrollDown = () => {
-    const nextSection = document.getElementById('about') || document.getElementById('collection');
+    const nextSection = document.getElementById('categories') || document.getElementById('contact');
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }

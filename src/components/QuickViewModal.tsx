@@ -164,7 +164,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                   <span>Size Guide</span>
                 </button>
               </div>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-4 gap-2">
                 {product.availableSizes.map((size) => {
                   const isSelected = selectedSize === size;
                   return (

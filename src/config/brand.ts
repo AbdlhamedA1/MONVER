@@ -9,6 +9,7 @@ export interface BrandConfig {
   headline: string;
   subheadline: string;
   heroImage: string;
+  logoImage: string;
   currency: string;
   contact: {
     whatsappNumber: string; // Egyptian phone format for wa.me link e.g. 201029617511
@@ -31,6 +32,7 @@ export const BRAND_CONFIG: BrandConfig = {
   
   // Official MONVER Brand Hero Image provided in images folder
   heroImage: `${import.meta.env.BASE_URL}images/hero img.jpeg`,
+  logoImage: `${import.meta.env.BASE_URL}images/logo-transparent.png`,
   
   currency: "EGP",
 

@@ -1,14 +1,28 @@
 import React from 'react';
 import { BRAND_CONFIG } from '../config/brand';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (route: 'home' | 'hoodies' | 'crewnecks') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const currentYear = new Date().getFullYear();
 
-  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNav = (e: React.MouseEvent, route?: 'home' | 'hoodies' | 'crewnecks', anchor?: string) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (route && onNavigate) {
+      onNavigate(route);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (anchor) {
+      const el = document.querySelector(anchor);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else if (onNavigate) {
+        onNavigate('home');
+        setTimeout(() => {
+          document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
     }
   };
 
@@ -18,12 +32,17 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-white/10">
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="font-display text-2xl tracking-[0.25em] font-bold text-white">
-                {BRAND_CONFIG.name}
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-monver-accent" />
-            </div>
+            <button
+              onClick={(e) => handleNav(e, 'home')}
+              className="group flex items-center text-left py-1"
+              aria-label={`${BRAND_CONFIG.name} Home`}
+            >
+              <img
+                src={BRAND_CONFIG.logoImage}
+                alt={BRAND_CONFIG.name}
+                className="h-7 sm:h-8 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
+              />
+            </button>
             <p className="text-xs uppercase tracking-[0.3em] text-monver-accent font-medium">
               {BRAND_CONFIG.tagline}
             </p>
@@ -33,47 +52,43 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links (No About Us, includes Categories) */}
           <div className="space-y-4">
             <h4 className="text-xs uppercase tracking-[0.25em] text-white font-medium">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <a
-                  href="#hero"
-                  onClick={(e) => handleScrollTo(e, '#hero')}
-                  className="text-white/60 hover:text-white transition-colors tracking-wider"
+                <button
+                  onClick={(e) => handleNav(e, 'home')}
+                  className="text-white/60 hover:text-white transition-colors tracking-wider text-left"
                 >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#about"
-                  onClick={(e) => handleScrollTo(e, '#about')}
-                  className="text-white/60 hover:text-white transition-colors tracking-wider"
+                <button
+                  onClick={(e) => handleNav(e, 'hoodies')}
+                  className="text-white/60 hover:text-white transition-colors tracking-wider text-left"
                 >
-                  About Us
-                </a>
+                  Hoodies (599 EGP)
+                </button>
               </li>
               <li>
-                <a
-                  href="#collection"
-                  onClick={(e) => handleScrollTo(e, '#collection')}
-                  className="text-white/60 hover:text-white transition-colors tracking-wider"
+                <button
+                  onClick={(e) => handleNav(e, 'crewnecks')}
+                  className="text-white/60 hover:text-white transition-colors tracking-wider text-left"
                 >
-                  Our Collection
-                </a>
+                  Crewnecks (549 EGP)
+                </button>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  onClick={(e) => handleScrollTo(e, '#contact')}
-                  className="text-white/60 hover:text-white transition-colors tracking-wider"
+                <button
+                  onClick={(e) => handleNav(e, undefined, '#contact')}
+                  className="text-white/60 hover:text-white transition-colors tracking-wider text-left"
                 >
                   Contact & Orders
-                </a>
+                </button>
               </li>
             </ul>
           </div>

@@ -151,7 +151,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
                 <span className="text-[10px] font-bold text-monver-accent">{selectedSize}</span>
               )}
             </div>
-            <div className="grid grid-cols-5 gap-1">
+            <div className="grid grid-cols-4 gap-1.5">
               {product.availableSizes.map((size) => {
                 const isSelected = selectedSize === size;
                 return (
